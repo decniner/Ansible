@@ -1,0 +1,11 @@
+#installing ansible
+yum install ansible
+
+#ansible is a push type configuration management tool. 
+It means the entire control lies with your master or your server system. 
+This is where you write your configuration file and 
+these are also responsible for pushing your configuration files onto your node or client system when required.
+
+#we can create a host file where we specify our target node or client machines
+gedit etc/var/host
+
