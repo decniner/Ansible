@@ -1,0 +1,9 @@
+---
+- name: Install Remote Desktop Connection Manager on test host
+  hosts: test
+  gather_facts: yes
+  tasks:
+    - name: Install Remote Desktop Connection Manager locally omitting the product_id
+      win_package:
+        path: C:\Temp\rdcman.msi
+        state: present
