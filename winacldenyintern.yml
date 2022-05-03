@@ -1,0 +1,11 @@
+---
+- name: Deny Intern
+  hosts: test
+  tasks:
+    - name: Deny Intern Access to c:\temp\test folder
+      win_acl: 
+        path: c:\temp\test
+        user: Intern
+        rights: Read,Write,Modify,FullControl,Delete
+        type: deny
+        state: present
