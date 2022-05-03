@@ -1,0 +1,8 @@
+---
+- name: ilovenano
+  hosts: localhost
+  tasks: 
+    - name: ensure nano is installed
+      apt:
+        name: nano
+        state: latest
