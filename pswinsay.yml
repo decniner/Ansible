@@ -1,0 +1,35 @@
+---
+- name: Run PowerShell
+  hosts: test
+  gather_facts: no
+  tasks:
+  
+  - name: Running multi-lined shell commands
+    community.windows.win_say:
+      msg: Running multi-lined shell commands
+    
+  - name: Run multi-lined shell commands
+    ansible.windows.win_shell: |
+      get-service | select name,status | Where Status -eq "Running"
+    register: result
+
+  - name: Saving output to file
+    community.windows.win_say:
+      msg: Saving output to file
+  
+  - name: Save output to file
+    copy:
+      content: "{{ result.stdout}}"
+      dest: c:/result.csv
+
+  - name: Debugging output
+    community.windows.win_say:
+      msg: debugging output
+  
+  - name: Debug output
+    debug:
+      msg: "{{ result.stdout_lines }}"
+  
+  - name: Warn of impending deployment
+    community.windows.win_say:
+      msg: Stop playing with ansible.  You are pissing me off. If you don't stop now, this computer will explode in 5 minutes.  Please find a bunker and stay there.
