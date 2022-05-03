@@ -1,0 +1,13 @@
+---
+- name: Install procexp
+  hosts: test
+  gather_facts: no
+  tasks:
+    - name: Install procexp using win_chocolatey
+      win_chocolatey:
+        name: procexp
+        state: present
+    - name: Install notepadplusplus latest version
+      win_chocolatey:
+        name: notepadplusplus
+        state: present
