@@ -1,0 +1,12 @@
+---
+- name: Create Windows User
+  hosts: test
+  gather_facts: no
+  tasks: 
+    - name: Creating Windows User
+      win_user:
+        name: john
+        password: B0bP4ssw0rd
+        state: present
+        groups:
+          - Users
