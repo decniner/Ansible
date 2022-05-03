@@ -1,0 +1,13 @@
+---
+- name: Delete Windows User
+  hosts: test
+  gather_facts: no
+  tasks: 
+    - name: Deleting Windows User
+      win_user:
+        name: bob
+        state: absent
+    - name: Deleting Windows User
+      win_user:
+        name: john
+        state: absent
