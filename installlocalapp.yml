@@ -1,0 +1,9 @@
+---
+- name: Install a local package
+  hosts: localhost
+  tasks:
+  - name: Install ntp
+    apt: name=ntp state=present
+
+  - name: Ensure ntp is running
+    service: name=ntp state=started
