@@ -8,5 +8,5 @@
   tasks: 
   - name: task1 - substitute vars
     debug:
-      msg: "My current os is {{ os_name }}" - {{ version }}
+      msg: "My current os is {{ os_name }} - {{ version }}"
     
