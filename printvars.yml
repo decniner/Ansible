@@ -1,0 +1,12 @@
+---
+- name: print vars content
+  hosts: test
+  gather_facts: false
+  vars:
+    os_name: "linux_desktop"
+    version: "21.0"
+  tasks: 
+  - name: task1 - substitute vars
+    debug:
+      msg: "My current os is {{ os_name }}" - {{ version }}
+    
