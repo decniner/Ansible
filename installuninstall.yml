@@ -1,12 +1,12 @@
 ---
 - hosts: test
   tasks:
-    - name: Install apache
+    - name: Install apache.
       apt:
         name: apache2
         state: present
 
-    - name: Uninstall apache
+    - name: Uninstall apache.
       apt:
         name: apache2
         state: absent
