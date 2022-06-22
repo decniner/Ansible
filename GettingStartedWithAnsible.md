@@ -1,0 +1,6 @@
+# Ansible
+
+List of commands
+
+#list inventory in graph format
+ansible-inventory --graph 
