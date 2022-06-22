@@ -8,7 +8,7 @@
 - name: Ensure homebrew packages are installed
   hosts: localhost
   tasks:
-  - homebrew: name=bat state:latest
+  - homebrew: name=bat state=latest
   - homebrew:
       name: jq
       state: latest
