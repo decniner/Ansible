@@ -1,5 +1,6 @@
 ---
 - name: Ensure ~/.gitconfig is copied from master.gitconfig
   hosts: localhosts
+  gather_facts: false
   tasks:
   - copy: src="../adhoc/master.gitconfig" dest="~/.gitconfig"
