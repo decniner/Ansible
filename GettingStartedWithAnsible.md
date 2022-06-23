@@ -2,8 +2,9 @@
 
 List of commands
 
-#list inventory in graph format
+#list inventory in graph/list format
 ansible-inventory --graph 
+ansible-inventory --list
 
 # ad-hoc command : list git global config from a subset of hosts in inventory
 ansible -m command -a "git config --global --list" vagrant
@@ -22,3 +23,4 @@ vagrant status
 #create the vm
 #it will bring the vm up with virtualbox provider
 vagrant up
+
