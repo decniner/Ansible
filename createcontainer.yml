@@ -1,0 +1,16 @@
+---
+- name: Ensure pre-reqs for docker container module
+  hosts: localhost
+  tasks:
+    - pip:
+      name: docker
+      state: install
+
+  name: Ensure docker containers are created
+  hosts: localhost
+  tasks:
+    - name: Ensure docker containers are started
+      docker_container: 
+        image: python
+        Interactive: yes
+    
