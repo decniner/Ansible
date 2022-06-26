@@ -32,3 +32,6 @@ ansible-doc -t inventory --list
 #dump the list of plugins for shell
 ansible-doc -t shell --list
 ansible-doc -t shell csh
+
+#documentation for docker connection
+ansible-doc -type connection docker
