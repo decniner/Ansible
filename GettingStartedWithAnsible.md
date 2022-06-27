@@ -35,3 +35,6 @@ ansible-doc -t shell csh
 
 #documentation for docker connection
 ansible-doc -type connection docker
+
+#ansible galaxy help
+ansible-galaxy -h
