@@ -40,3 +40,4 @@ ansible-doc -type connection docker
 ansible-galaxy -h
 ansible-galaxy role -h
 ansible-galaxy collection -h
+ansible-galaxy role info kosssi.gitconfig
