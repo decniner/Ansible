@@ -1,4 +1,4 @@
-# Ansible
+Q# Ansible
 
 List of commands
 
@@ -41,3 +41,9 @@ ansible-galaxy -h
 ansible-galaxy role -h
 ansible-galaxy collection -h
 ansible-galaxy role info kosssi.gitconfig
+
+#check which role is installed
+ansible-galaxy role list
+
+#install ansible-galaxy role
+#ansible-galaxy install kosssi.gitconfig
